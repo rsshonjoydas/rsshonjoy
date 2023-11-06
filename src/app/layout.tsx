@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import { absoluteUrl, cn } from '@/lib/utils';
 
+import { ThemeWrapper } from '@/components/theme-wrapper';
 import { ThemeProvider } from './_components/providers';
 import { TailwindIndicator } from './_components/tailwind-indicator';
 
@@ -72,10 +73,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          <ActiveSectionContextProvider>
-            {children}
-            <TailwindIndicator />
-          </ActiveSectionContextProvider>
+          <ThemeWrapper>
+            <ActiveSectionContextProvider>
+              {children}
+              <TailwindIndicator />
+            </ActiveSectionContextProvider>
+          </ThemeWrapper>
         </ThemeProvider>
       </body>
     </html>
