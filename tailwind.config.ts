@@ -14,6 +14,7 @@ const config = {
     extend: {
       colors: {
         lavender: '#E6E6FA',
+        tertiary: '#151030',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -66,6 +67,12 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      boxShadow: {
+        card: '0px 35px 120px -15px #211e35',
+      },
+      screens: {
+        xs: '450px',
       },
     },
   },
