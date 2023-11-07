@@ -1,10 +1,9 @@
-import { ModeToggle } from '@/components/mode-toggle';
+import { Hero } from '@/section/hero';
 
 export default function Home() {
   return (
     <main>
-      <h1>RS Shonjoy</h1>
-      <ModeToggle />
+      <Hero />
     </main>
   );
 }
