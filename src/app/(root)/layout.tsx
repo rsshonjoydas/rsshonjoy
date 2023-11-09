@@ -1,10 +1,12 @@
+import { SiteFooter } from './_components/site-footer';
 import { SiteHeader } from './_components/site-header';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className='relative flex flex-col min-h-screen'>
+    <main className='relative flex min-h-screen flex-col'>
       <SiteHeader />
-      <div className='w-full mx-auto px-8 flex-1'>{children}</div>
+      <div className='mx-auto w-full flex-1 px-8'>{children}</div>
+      <SiteFooter />
     </main>
   );
 }
