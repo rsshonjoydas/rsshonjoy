@@ -16,10 +16,14 @@ export const Hero = () => {
   const { ref } = useSectionInView('Home');
 
   return (
-    <motion.div id='home' ref={ref} className='scroll-mt-14 overflow-hidden'>
+    <motion.div
+      id='home'
+      ref={ref}
+      className='flex h-screen scroll-mt-14 items-center justify-center overflow-hidden'
+    >
       <section className='container mx-auto my-12 px-5'>
         <AnimatedTextCharacter
-          className='z-50 -mb-8 mt-20 bg-gradient-to-r from-primary to-[#E6E6FA] bg-clip-text text-5xl font-bold leading-normal text-transparent lg:pb-8 lg:text-8xl'
+          className='z-50 bg-gradient-to-r from-primary to-[#E6E6FA] bg-clip-text text-5xl font-bold leading-normal text-transparent sm:text-6xl md:pb-8 md:text-7xl lg:text-8xl'
           text="Hi! I'm Shonjoy"
         />
         <div className='flex flex-col items-center justify-between gap-4 py-10 md:flex-row'>
