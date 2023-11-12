@@ -5,7 +5,7 @@
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
 
-import { services } from '@/constants';
+import { services, skills } from '@/constants';
 import { SectionWrapper } from '@/hoc/section-wrapper';
 import { useSectionInView } from '@/hooks/use-nav';
 import { fadeIn, textVariant } from '@/lib/motion';
@@ -39,7 +39,17 @@ const About = () => {
     <section id='about' ref={ref} className='container items-center px-5 py-10'>
       <motion.div variants={textVariant(0.5)}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h1 className='head-text'>
+          Hello, I&apos;m{' '}
+          <span className='blue-gradient_text font-semibold drop-shadow'> Shonjoy</span>
+          👋
+        </h1>
+        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+          <p>
+            Software Engineer based in Croatia, specializing in technical education through hands-on
+            learning and building applications.
+          </p>
+        </div>
       </motion.div>
 
       <motion.p
@@ -56,6 +66,20 @@ const About = () => {
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
+      </div>
+
+      <div className='flex flex-col py-10'>
+        <h3 className='subhead-text'>My Skills</h3>
+        <div className='mt-16 flex flex-wrap gap-12'>
+          {skills.map((skill) => (
+            <div className='block-container h-20 w-20' key={skill.name}>
+              <div className='btn-back rounded-xl shadow-light dark:shadow-dark' />
+              <div className='btn-front flex items-center justify-center rounded-xl'>
+                <img src={skill.imageUrl} alt={skill.name} className='h-1/2 w-1/2 object-contain' />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

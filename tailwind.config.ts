@@ -70,6 +70,8 @@ const config = {
       },
       boxShadow: {
         card: '0px 35px 120px -15px #211e35',
+        light: '16px 0 40px #e4e4e4',
+        dark: '16px 0 40px #333',
       },
       screens: {
         xs: '450px',

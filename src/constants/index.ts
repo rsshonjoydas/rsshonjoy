@@ -235,3 +235,116 @@ export const socialMedia = [
     color: 'hover:bg-[#E1306C]',
   },
 ];
+
+export const skills = [
+  {
+    imageUrl: '/icons/html.svg',
+    name: 'HTML',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/css.svg',
+    name: 'CSS',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/javascript.svg',
+    name: 'JavaScript',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/typescript.svg',
+    name: 'TypeScript',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/react.svg',
+    name: 'React',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/nextjs.svg',
+    name: 'Next.js',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/threejs.svg',
+    name: 'Three.js',
+    type: 'Animation',
+  },
+  {
+    imageUrl: '/icons/sass.svg',
+    name: 'Sass',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/tailwindcss.svg',
+    name: 'Tailwind CSS',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/mui.svg',
+    name: 'Material-UI',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: '/icons/motion.svg',
+    name: 'Motion',
+    type: 'Animation',
+  },
+  {
+    imageUrl: '/icons/redux.svg',
+    name: 'Redux',
+    type: 'State Management',
+  },
+  {
+    imageUrl: '/icons/prisma.svg',
+    name: 'Prisma',
+    type: 'ORM for Node.js & TypeScript',
+  },
+  {
+    imageUrl: '/icons/nodejs.svg',
+    name: 'Node.js',
+    type: 'Backend',
+  },
+  {
+    imageUrl: '/icons/express.svg',
+    name: 'Express',
+    type: 'Backend',
+  },
+  {
+    imageUrl: '/icons/mongodb.svg',
+    name: 'MongoDB',
+    type: 'Database',
+  },
+  {
+    imageUrl: '/icons/firebase.svg',
+    name: 'Firebase',
+    type: 'Database',
+  },
+  {
+    imageUrl: '/icons/redis.svg',
+    name: 'Redis',
+    type: 'Database',
+  },
+  {
+    imageUrl: '/icons/docker.svg',
+    name: 'MongoDB',
+    type: 'DevOps',
+  },
+  {
+    imageUrl: '/icons/git.svg',
+    name: 'Git',
+    type: 'Version Control',
+  },
+  {
+    imageUrl: '/icons/github.svg',
+    name: 'GitHub',
+    type: 'Version Control',
+  },
+  {
+    imageUrl: '/icons/gitlab.svg',
+    name: 'GitLab',
+    type: 'Version Control',
+  },
+];
