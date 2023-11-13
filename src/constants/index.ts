@@ -150,65 +150,6 @@ export const projects = [
   },
 ];
 
-export const technologies = [
-  {
-    name: 'JavaScript',
-    icon: '/tech/javascript.png',
-  },
-  {
-    name: 'TypeScript',
-    icon: '/tech/typescript.png',
-  },
-  {
-    name: 'React JS',
-    icon: '/tech/reactjs.svg',
-  },
-  {
-    name: 'Next JS',
-    icon: '/tech/next-js.svg',
-  },
-  {
-    name: 'Three JS',
-    icon: '/tech/threejs.svg',
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: '/tech/redux.png',
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: '/tech/tailwind-css.png',
-  },
-  {
-    name: 'Prisma',
-    icon: '/tech/prisma.svg',
-  },
-  {
-    name: 'PWA',
-    icon: '/tech/pwa.png',
-  },
-  {
-    name: 'Node JS',
-    icon: '/tech/nodejs.png',
-  },
-  {
-    name: 'MongoDB',
-    icon: '/tech/mongodb.png',
-  },
-  {
-    name: 'Redis',
-    icon: '/tech/redis.svg',
-  },
-  {
-    name: 'Firebase',
-    icon: '/tech/firebase.png',
-  },
-  {
-    name: 'docker',
-    icon: '/tech/docker.png',
-  },
-];
-
 export const socialMedia = [
   {
     name: 'Facebook',
