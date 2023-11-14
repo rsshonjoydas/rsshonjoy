@@ -26,7 +26,7 @@ export const NavbarItem = ({
   return (
     <Link
       className={cn('flex w-full px-3 py-3 transition-colors hover:text-foreground/80', {
-        'text-foreground/60': activeSection === label,
+        'text-primary/80': activeSection === label,
       })}
       href={href}
       onClick={() => {

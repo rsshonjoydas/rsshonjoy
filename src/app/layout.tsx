@@ -10,7 +10,6 @@ import { ThemeWrapper } from '@/components/theme-wrapper';
 import { ThemeProvider } from './_components/providers';
 import { TailwindIndicator } from './_components/tailwind-indicator';
 
-import 'react-vertical-timeline-component/style.min.css';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });

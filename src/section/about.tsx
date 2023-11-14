@@ -18,7 +18,7 @@ const ServiceCard = ({ index, title, icon }: any) => (
       className='w-full rounded-[20px] bg-gradient-to-t from-primary to-lavender p-[1px] shadow-card'
     >
       <div className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-tertiary px-12 py-5'>
-        <img src={icon} alt='web-development' className='h-16 w-16 object-contain' />
+        <img src={icon} alt='web-development' className='h-32 w-32 object-contain' />
         {/* <Image
           src={icon}
           height={16}
@@ -36,7 +36,7 @@ const About = () => {
   const { ref } = useSectionInView('About');
 
   return (
-    <section id='about' ref={ref} className='container items-center px-5 py-10'>
+    <section id='about' ref={ref} className='container items-center px-5 py-12'>
       <motion.div variants={textVariant(0.5)}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h1 className='head-text'>

@@ -55,14 +55,10 @@ const Works = () => {
   const { ref } = useSectionInView('Projects');
 
   return (
-    <section
-      id='projects'
-      ref={ref}
-      className='container my-10 scroll-mt-14 items-center overflow-hidden px-5'
-    >
+    <section id='projects' ref={ref} className='container items-center px-5 py-1 pt-20'>
       <motion.div variants={textVariant(0)}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className='head-text'>Projects.</h2>
       </motion.div>
 
       <div className='flex w-full'>

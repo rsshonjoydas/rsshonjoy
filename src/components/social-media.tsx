@@ -10,6 +10,7 @@ export const SocialMedia = () => (
         side='left'
         align='center'
         label={item.name}
+        key={item.name}
         className='mr-2 bg-foreground text-background'
       >
         <Link

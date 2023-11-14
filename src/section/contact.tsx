@@ -35,7 +35,7 @@ const Contact = () => {
         className='bg-black-100 flex-[0.75] rounded-2xl p-8'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className='head-text'>Contact.</h3>
 
         <form onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
