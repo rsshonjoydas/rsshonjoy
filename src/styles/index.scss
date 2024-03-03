@@ -78,3 +78,13 @@ body,
     --ring: 0 0% 14.9%;
   }
 }
+
+@layer utilities {
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  }
+
+  .btn {
+    @apply rounded-md bg-gradient-to-r from-[#00c6ff] to-[#0072ff] px-5 py-2.5 text-center text-sm font-medium text-white hover:opacity-80 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto;
+  }
+}
