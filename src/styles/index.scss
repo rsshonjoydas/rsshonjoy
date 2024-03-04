@@ -87,4 +87,17 @@ body,
   .btn {
     @apply rounded-md bg-gradient-to-r from-[#00c6ff] to-[#0072ff] px-5 py-2.5 text-center text-sm font-medium text-white hover:opacity-80 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto;
   }
+
+  .blue-text-gradient {
+    // background: -webkit-linear-gradient(#eee, #333);
+    background: #56ccf2; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      #2f80ed,
+      #56ccf2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

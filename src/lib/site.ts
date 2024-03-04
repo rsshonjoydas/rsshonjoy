@@ -6,6 +6,9 @@ export type SiteConfig = {
   links: {
     twitter: string;
     github: string;
+    facebook: string;
+    instagram: string;
+    linkedin: string;
   };
 };
 
@@ -16,7 +19,10 @@ export const siteConfig: SiteConfig = {
   url: `${process.env.NEXT_PUBLIC_APP_URL}`,
   ogImage: 'https://redolence.com/og.jpg',
   links: {
+    facebook: 'https://www.facebook.com/rsshonjoydas',
     twitter: 'https://twitter.com/rsshonjoydas',
+    instagram: 'https://www.instagram.com/rsshonjoydas',
+    linkedin: 'https://www.linkedin.com/in/rsshonjoydas',
     github: 'https://github.com/rsshonjoydas',
   },
 };

@@ -1,10 +1,15 @@
-import { Button } from '@/components/ui/button';
+import { ScrollButtonBottom } from './_components/scroll-button-bottom';
+import { ScrollButtonTop } from './_components/scroll-button-top';
+import { SocialMedia } from './_components/social-media';
+import { Hero } from './_screens/hero';
 
 export default function Home() {
   return (
     <section>
-      <h1 className='text-purple-500'>RS Shonjoy</h1>
-      <Button variant='ghost'>Redolence</Button>
+      <Hero />
+      <SocialMedia />
+      <ScrollButtonTop />
+      <ScrollButtonBottom />
     </section>
   );
 }
