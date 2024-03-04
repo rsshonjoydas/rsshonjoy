@@ -101,3 +101,26 @@ body,
     -webkit-text-fill-color: transparent;
   }
 }
+
+// =============== Clerk ===============
+// Apply styles to Clerk modal content
+.cl-internal-1qe8znk,
+.cl-headerTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cl-internal-vqjo9j {
+  justify-content: center !important;
+}
+
+// auth modal sign in and sign up toggle
+.cl-footer,
+.cl-internal-b3fm6y,
+.cl-internal-b3fm6y,
+.cl-userButtonPopoverFooter {
+  display: none;
+}
+// End Clerk
+// ==============================================
