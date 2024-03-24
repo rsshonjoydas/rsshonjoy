@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { TailwindIndicator } from '@/components/themes/tailwind-indicator';
+import { Toaster } from '@/components/ui/sonner';
 import { siteConfig } from '@/lib/site';
 import { absoluteUrl } from '@/lib/utils';
 import '@/styles/index.scss';
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
           <TailwindIndicator />
         </ThemeProvider>
       </body>
