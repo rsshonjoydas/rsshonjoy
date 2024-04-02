@@ -25,6 +25,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   try {
     info = await db.about.create({
       data: {
+        userId,
         title,
         bio,
       },
