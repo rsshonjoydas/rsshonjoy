@@ -28,7 +28,7 @@ export const CreateTitleBio = () => {
   };
 
   return (
-    <form action={onSubmit} className='gap-x-2 space-y-3 p-3 px-2 pt-2'>
+    <form action={onSubmit} className='gap-x-2 space-y-3 p-3 px-5 pt-2'>
       <div className='flex flex-col'>
         <FormTextarea
           id='title'

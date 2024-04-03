@@ -85,61 +85,63 @@ export const ServiceSection = ({ data }: ServiceSectionProps) => {
   }
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable droppableId='services' type='list' direction='horizontal'>
-        {(provided) => (
-          <div
-            {...provided.droppableProps}
-            ref={provided.innerRef}
-            className='mt-20 flex flex-wrap justify-center gap-10'
-          >
-            {services.map((service, index) => (
-              <Draggable key={service.id} draggableId={service.id} index={index}>
-                {(provided) => (
-                  <div
-                    className='relative mx-0 flex w-[220px] items-center justify-center'
-                    ref={provided.innerRef}
-                    {...provided.draggableProps}
-                  >
+    <div className='py-10'>
+      <h3 className='subhead-text p-5'>Services</h3>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Droppable droppableId='services' type='list' direction='horizontal'>
+          {(provided) => (
+            <div
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+              className='mt-3 flex flex-wrap justify-center gap-10'
+            >
+              {services.map((service, index) => (
+                <Draggable key={service.id} draggableId={service.id} index={index}>
+                  {(provided) => (
                     <div
-                      {...provided.dragHandleProps}
-                      className='h-full w-full rounded-[20px] bg-gradient-to-t from-lavender to-blue-400 p-[1px] shadow-card'
+                      className='relative mx-0 flex w-[220px] items-center justify-center'
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
                     >
-                      <div className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-background/70 p-5 dark:bg-tertiary'>
-                        <div className='absolute right-2 top-2'>
-                          <ServiceAction data={service} fetchData={fetchData} />
+                      <div
+                        {...provided.dragHandleProps}
+                        className='h-full w-full rounded-[20px] bg-gradient-to-t from-lavender to-blue-400 p-[1px] shadow-card'
+                      >
+                        <div className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-background/70 p-5 dark:bg-tertiary'>
+                          <div className='absolute right-2 top-2'>
+                            <ServiceAction data={service} fetchData={fetchData} />
+                          </div>
+                          <Image
+                            src={service.imageUrl || ''}
+                            height={16}
+                            width={16}
+                            sizes='100vw'
+                            layout='responsive'
+                            style={{ objectFit: 'contain', objectPosition: 'center' }}
+                            alt={service.title || 'Service Image'}
+                            className='size-16 object-contain'
+                          />
+                          <h3 className='text-center text-lg font-bold text-foreground/60'>
+                            {service.title}
+                          </h3>
                         </div>
-                        <Image
-                          src={service.imageUrl || ''}
-                          height={16}
-                          width={16}
-                          sizes='100vw'
-                          layout='responsive'
-                          style={{ objectFit: 'contain', objectPosition: 'center' }}
-                          alt={service.title || 'Service Image'}
-                          className='size-16 object-contain'
-                        />
-                        <h3 className='text-center text-lg font-bold text-foreground/60'>
-                          {service.title}
-                        </h3>
                       </div>
                     </div>
+                  )}
+                </Draggable>
+              ))}
+              {provided.placeholder}
+              <div className='mx-0 flex w-[220px] items-center justify-center'>
+                <div className='w-full rounded-[20px] bg-gradient-to-t from-lavender to-blue-400 p-[1px] shadow-card'>
+                  <div className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-background/70 px-12 py-5 dark:bg-tertiary'>
+                    <CreateService fetchData={fetchData} />
                   </div>
-                )}
-              </Draggable>
-            ))}
-            {provided.placeholder}
-
-            <div className='mx-0 flex w-[220px] items-center justify-center'>
-              <div className='w-full rounded-[20px] bg-gradient-to-t from-lavender to-blue-400 p-[1px] shadow-card'>
-                <div className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-background/70 px-12 py-5 dark:bg-tertiary'>
-                  <CreateService fetchData={fetchData} />
                 </div>
               </div>
             </div>
-          </div>
-        )}
-      </Droppable>
-    </DragDropContext>
+          )}
+        </Droppable>
+      </DragDropContext>
+    </div>
   );
 };

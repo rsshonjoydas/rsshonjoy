@@ -13,7 +13,6 @@ import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -21,7 +20,6 @@ import {
 import {
   Drawer,
   DrawerContent,
-  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -121,7 +119,7 @@ export const ServiceAction = ({ data, fetchData }: ServiceActionProps) => {
               <Button
                 variant='ghost'
                 disabled={loading}
-                className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal'
+                className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0'
               >
                 <Pencil className='-ml-3 mr-2 size-5' />
                 Update
@@ -130,7 +128,6 @@ export const ServiceAction = ({ data, fetchData }: ServiceActionProps) => {
             <DialogContent className='sm:max-w-[425px]'>
               <DialogHeader>
                 <DialogTitle>Update Service</DialogTitle>
-                <DialogDescription>Update service info.</DialogDescription>
               </DialogHeader>
               <FormImageUpload data={data} handleSubmit={handleUpdate} buttonText='Save Change' />
             </DialogContent>
@@ -141,7 +138,7 @@ export const ServiceAction = ({ data, fetchData }: ServiceActionProps) => {
               <Button
                 variant='ghost'
                 disabled={loading}
-                className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal'
+                className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0'
               >
                 <Pencil className='-ml-3 mr-2 size-5' />
                 Update
@@ -150,7 +147,6 @@ export const ServiceAction = ({ data, fetchData }: ServiceActionProps) => {
             <DrawerContent className='focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0'>
               <DrawerHeader className='text-left'>
                 <DrawerTitle>Update Service</DrawerTitle>
-                <DrawerDescription>Update service info.</DrawerDescription>
               </DrawerHeader>
               <FormImageUpload data={data} handleSubmit={handleUpdate} buttonText='Save Change' />
             </DrawerContent>

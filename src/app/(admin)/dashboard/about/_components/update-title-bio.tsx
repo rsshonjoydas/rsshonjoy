@@ -83,7 +83,7 @@ export const UpdateTitleBio = ({ data }: UpdateBioProps) => {
   useOnClickOutside(formRef, disabledEditing);
 
   return (
-    <div className='items-start justify-between gap-x-2 px-2 pt-2 text-sm font-semibold'>
+    <div className='items-start justify-between gap-x-2 px-5 pt-2 text-sm font-semibold'>
       {isEditing ? (
         <form ref={formRef} action={handleSubmit} className='w-full flex-1'>
           <input hidden id='id' name='id' value={data.id} />

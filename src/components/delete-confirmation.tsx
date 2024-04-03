@@ -19,7 +19,7 @@ export const DeleteConfirmation = ({ onDelete, loading, buttonText }: any) => (
       <Button
         variant='ghost'
         disabled={loading}
-        className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal'
+        className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0'
       >
         <Trash2 className='-ml-3 mr-2 size-5' />
         {buttonText || 'Delete'}

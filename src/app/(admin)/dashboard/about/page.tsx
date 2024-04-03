@@ -26,6 +26,7 @@ const AboutPage = async () => {
 
   return (
     <div>
+      <h3 className='subhead-text p-5 '>About Me</h3>
       {about.length > 0 ? (
         <>
           {about.map((item) => (

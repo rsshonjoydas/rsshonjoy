@@ -53,10 +53,15 @@ export const FormImageUpload = ({ data, handleSubmit, buttonText }: FormImageUpl
     },
   });
 
-  const onDrop = useCallback((acceptedFiles: File[]) => {
-    const file = acceptedFiles[0];
-    setPreview(URL.createObjectURL(file));
-  }, []);
+  const onDrop = useCallback(
+    (acceptedFiles: File[]) => {
+      const file = acceptedFiles[0];
+      setImage(file);
+      setPreview(URL.createObjectURL(file));
+      form.setValue('image', URL.createObjectURL(file));
+    },
+    [form]
+  );
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*' as unknown as Accept,
