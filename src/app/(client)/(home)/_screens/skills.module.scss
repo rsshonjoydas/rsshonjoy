@@ -1,0 +1,42 @@
+.blockContainer {
+  position: relative;
+  transition: 250ms;
+  perspective: 500px;
+
+  .btnBlack {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: inherit;
+    height: inherit;
+    transition: 250ms;
+    transform-style: preserve-3d;
+    transform-origin: bottom right;
+    transform: rotateZ(15deg);
+    will-change: transform;
+    // box-shadow: 16px 0 40px #e4e4e4;
+  }
+
+  .btnFront {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    background-color: #ffffff33;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    transition: 250ms;
+    transform-style: preserve-3d;
+    transform-origin: top left;
+    overflow: hidden;
+  }
+
+  &:hover > .btnBlack {
+    transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+  }
+
+  &:hover > .btnFront {
+    transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+  }
+}

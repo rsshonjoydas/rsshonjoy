@@ -4,6 +4,7 @@ import { SocialMedia } from './_components/social-media';
 import { AboutScreen } from './_screens/about';
 import { Hero } from './_screens/hero';
 import { Services } from './_screens/services';
+import { Skills } from './_screens/skills';
 
 import db from '@/lib/db';
 
@@ -18,6 +19,7 @@ export default async function Home() {
       <ScrollButtonBottom />
       <AboutScreen data={about} />
       <Services />
+      <Skills />
     </section>
   );
 }
