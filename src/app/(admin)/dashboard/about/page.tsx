@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 
 import { CreateTitleBio } from './_components/create-title-bio';
 import { ServiceSection } from './_components/service-section';
+import { SkillsSection } from './_components/skill-section';
 import { UpdateTitleBio } from './_components/update-title-bio';
 
 import db from '@/lib/db';
@@ -16,6 +17,15 @@ const AboutPage = async () => {
 
   const about = await db.about.findMany();
   const service = await db.services.findMany({
+    where: {
+      userId,
+    },
+    orderBy: {
+      position: 'asc',
+    },
+  });
+
+  const skill = await db.skills.findMany({
     where: {
       userId,
     },
@@ -38,6 +48,7 @@ const AboutPage = async () => {
       )}
 
       <ServiceSection data={service} />
+      <SkillsSection data={skill} />
     </div>
   );
 };

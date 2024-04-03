@@ -30,3 +30,16 @@ model Services {
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
 }
+
+model Skills {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String
+  title           String?
+  imageUrl        String?
+  publicId        String?
+
+  position        Int?
+
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}
