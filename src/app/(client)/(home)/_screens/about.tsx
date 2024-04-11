@@ -4,6 +4,7 @@ import { About } from '@prisma/client';
 import { motion } from 'framer-motion';
 import { Fragment } from 'react';
 
+import AnimatedContent from '@/components/animated-content';
 import { fadeIn, textVariant } from '@/lib/motion';
 
 interface AboutProps {
@@ -24,11 +25,13 @@ export const AboutScreen = async ({ data }: AboutProps) => (
       <Fragment key={item.id}>
         <motion.div variants={textVariant(0.5)}>
           <p className='mt-12 text-sm uppercase tracking-wider'>Introduction</p>
-          <h1 className='text-3xl font-semibold sm:text-5xl sm:leading-snug'>
-            Hello, I&apos;m{' '}
-            <span className='blue-gradient_text font-semibold drop-shadow'> Shonjoy</span>
-            👋
-          </h1>
+          <AnimatedContent>
+            <h1 className='text-3xl font-semibold sm:text-5xl sm:leading-snug'>
+              Hello, I&apos;m{' '}
+              <span className='blue-gradient_text font-semibold drop-shadow'> Shonjoy</span>
+              👋
+            </h1>
+          </AnimatedContent>
           <div className='mt-5 flex flex-col gap-3 text-slate-500'>
             <p>{item.title}</p>
           </div>

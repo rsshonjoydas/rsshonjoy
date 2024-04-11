@@ -11,6 +11,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
+import AnimatedContent from '@/components/animated-content';
 import { Loader } from '@/components/loader';
 import { Fox } from '@/components/modals/fox';
 import {
@@ -85,9 +86,11 @@ export const Contact = () => {
   return (
     <section id='contact' className='container relative flex flex-col lg:flex-row'>
       <div className='flex min-w-[50%] flex-1 flex-col'>
-        <h1 className='head-text'>
-          Get in <span className='blue-gradient_text font-semibold drop-shadow'>Touch</span>
-        </h1>
+        <AnimatedContent>
+          <h1 className='head-text'>
+            Get in <span className='blue-gradient_text font-semibold drop-shadow'>Touch</span>
+          </h1>
+        </AnimatedContent>
 
         <Form {...form}>
           <form

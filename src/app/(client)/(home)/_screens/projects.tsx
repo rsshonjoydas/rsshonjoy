@@ -12,6 +12,7 @@ import { MutableRefObject, useEffect, useRef, useState } from 'react';
 
 import styles from './projects.module.scss';
 
+import AnimatedContent from '@/components/animated-content';
 import { RoundedButton } from '@/components/rounded-button';
 import { projects } from '@/constants/projects';
 
@@ -91,9 +92,11 @@ export const Projects = () => {
       id='projects'
       className='container px-5 py-16'
     >
-      <h1 className='head-text'>
-        My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
-      </h1>
+      <AnimatedContent>
+        <h1 className='head-text'>
+          My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
+        </h1>
+      </AnimatedContent>
       <div className='my-20 flex flex-wrap gap-16 lg:items-center lg:justify-center'>
         {projects.map((project, index) => (
           <div>
