@@ -3,6 +3,7 @@ import { ScrollButtonTop } from './_components/scroll-button-top';
 import { SocialMedia } from './_components/social-media';
 import { AboutScreen } from './_screens/about';
 import { Hero } from './_screens/hero';
+import { Projects } from './_screens/projects';
 import { Services } from './_screens/services';
 import { Skills } from './_screens/skills';
 
@@ -20,6 +21,7 @@ export default async function Home() {
       <AboutScreen data={about} />
       <Services />
       <Skills />
+      <Projects />
     </section>
   );
 }

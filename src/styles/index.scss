@@ -79,37 +79,6 @@ body,
   }
 }
 
-@layer utilities {
-  .head-text {
-    @apply text-3xl font-semibold sm:text-5xl sm:leading-snug;
-  }
-
-  .subhead-text {
-    @apply relative text-xl font-semibold sm:text-3xl;
-  }
-
-  .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
-  }
-
-  .btn {
-    @apply rounded-md bg-gradient-to-r from-[#00c6ff] to-[#0072ff] px-5 py-2.5 text-center text-sm font-medium text-white hover:opacity-80 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto;
-  }
-
-  .blue-text-gradient {
-    // background: -webkit-linear-gradient(#eee, #333);
-    background: #56ccf2; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to top,
-      #2f80ed,
-      #56ccf2
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
 // =============== Clerk ===============
 // Apply styles to Clerk modal content
 .cl-internal-1qe8znk,
@@ -132,3 +101,115 @@ body,
 }
 // End Clerk
 // ==============================================
+
+// Define button colors and their gradients as a map
+$button-colors: (
+  red: (
+    #ff4b1f,
+    #ff9068,
+  ),
+  green: (
+    #adfda2,
+    #11d3f3,
+  ),
+  yellow: (
+    #f7971e,
+    #ffd200,
+  ),
+  blue: (
+    #0061ff,
+    #60efff,
+  ),
+  orange: (
+    #ff0f7b,
+    #f89b29,
+  ),
+  pink: (
+    #e81cff,
+    #40c9ff,
+  ),
+  black: (
+    #0a1647,
+    #e4e7e4,
+  ),
+);
+
+// Mixin to generate button background gradient
+@mixin button-back-gradient($color) {
+  background: linear-gradient(135deg, nth($color, 1) -20%, nth($color, 2) 120%);
+}
+
+@layer utilities {
+  .max-container {
+    @apply mx-auto min-h-[calc(100vh-80px)] max-w-5xl px-8 pb-12 pt-[126px] sm:p-16;
+  }
+
+  .head-text {
+    @apply text-3xl font-semibold sm:text-5xl sm:leading-snug;
+  }
+
+  .subhead-text {
+    @apply relative text-xl font-semibold sm:text-3xl;
+  }
+
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  }
+
+  .blue-text-gradient {
+    background: #56ccf2; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      #2f80ed,
+      #56ccf2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn {
+    @apply rounded-md bg-gradient-to-r from-[#00c6ff] to-[#0072ff] px-5 py-2.5 text-center text-sm font-medium text-white hover:opacity-80 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto;
+  }
+
+  .block-container {
+    position: relative;
+    transition: 250ms;
+    perspective: 500px;
+
+    // Loop through the button colors map to generate classes
+    @each $name, $gradient in $button-colors {
+      .btn-back-#{$name} {
+        @include button-back-gradient($gradient);
+      }
+    }
+
+    .btn-back {
+      @extend .block-container;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      transform: rotateZ(15deg);
+      will-change: transform;
+      box-shadow: 16px 0 40px #e4e4e4;
+    }
+
+    .btn-front {
+      @extend .block-container;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+    }
+
+    &:hover > .btn-back {
+      transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+    }
+
+    &:hover > .btn-front {
+      transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+    }
+  }
+}

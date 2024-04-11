@@ -1,0 +1,66 @@
+const cloudinaryUrl = 'https://res.cloudinary.com/rsshonjoydas/image/upload';
+
+export const projects = [
+  {
+    title: 'AI Companion',
+    description: 'Build a SaaS AI Companion with Next.js 13, React, Tailwind, Prisma, Stripe.',
+    thumbnail: `${cloudinaryUrl}/v1712756220/rsshonjoy/projects/ai-companion.png`,
+    iconUrl: `${cloudinaryUrl}/v1712791068/rsshonjoy/projects/chat.svg`,
+    theme: 'btn-back-red',
+    color: '#34495e',
+    github: 'https://github.com/rsshonjoydas/ai-companion',
+    link: 'https://ai-companion-rsshonjoydas.vercel.app',
+  },
+  {
+    title: 'AI SAAS Platform',
+    description: 'Build a SaaS AI sass with Next.js 13, React, Tailwind, Prisma, Stripe.',
+    thumbnail: `${cloudinaryUrl}/v1712789344/rsshonjoy/projects/ai-saas.png`,
+    iconUrl: `${cloudinaryUrl}/v1712790432/rsshonjoy/projects/chatgpt.svg`,
+    theme: 'btn-back-green',
+    color: '#2c3e50',
+    github: 'https://github.com/rsshonjoydas/ai-saas',
+    link: 'https://ai-saas-rsshonjoydas.vercel.app',
+  },
+  {
+    title: 'LMS Platform',
+    description: 'Build an LMS Platform: Next.js 13, React, Tailwind, Stripe, Mux, Prisma, MongoDB',
+    thumbnail: `${cloudinaryUrl}/v1712788515/rsshonjoy/projects/lms-platform.png`,
+    iconUrl: `${cloudinaryUrl}/v1712790431/rsshonjoy/projects/udemy.svg`,
+    theme: 'btn-back-blue',
+    color: '#95a5a6',
+    github: 'https://github.com/rsshonjoydas/lms-platform',
+    link: 'https://lms-platform-rsshonjoydas.vercel.app',
+  },
+  {
+    title: 'Discord Clone',
+    description: 'Fullstack Discord Clone: Next.js 13, React, Socket.io, Prisma, Tailwind, MongoDB',
+    thumbnail: `${cloudinaryUrl}/v1712788513/rsshonjoy/projects/discord-clone.png`,
+    iconUrl: `${cloudinaryUrl}/v1712790425/rsshonjoy/projects/discord.svg`,
+    theme: 'btn-back-pink',
+    color: '#7f8c8d',
+    github: 'https://github.com/rsshonjoydas/discord-clone',
+    link: 'https://discord-clone-production-ed7b.up.railway.app',
+  },
+  {
+    title: 'E-Commerce Admin',
+    description:
+      'Full Stack E-Commerce + Dashboard & CMS: Next.js 13 App Router, React, Tailwind, Prisma, MongoDB',
+    thumbnail: `${cloudinaryUrl}/v1712788513/rsshonjoy/projects/e-commerce-admin.png`,
+    iconUrl: `${cloudinaryUrl}/v1712790425/rsshonjoy/projects/shopping-cart.svg`,
+    theme: 'btn-back-orange',
+    color: '#ecf0f1',
+    github: 'https://github.com/rsshonjoydas/next-ecommerce-admin',
+    link: 'https://next-ecommerce-admin-rsshonjoydas.vercel.app',
+  },
+  {
+    title: 'Trello Clone',
+    description:
+      'Fullstack Trello Clone: Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, MongoDB',
+    thumbnail: `${cloudinaryUrl}/v1712788513/rsshonjoy/projects/trello-clone.png`,
+    iconUrl: `${cloudinaryUrl}/v1712791069/rsshonjoy/projects/trello.svg`,
+    theme: 'btn-back-yellow',
+    color: '#bdc3c7',
+    github: 'https://github.com/rsshonjoydas/trello-clone',
+    link: 'https://trello-clone-rsshonjoydas.vercel.app',
+  },
+];
