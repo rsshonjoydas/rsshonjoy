@@ -9,9 +9,13 @@ export const POST = async (req: NextRequest) => {
   const { userId } = auth();
 
   if (!userId) {
-    return {
-      error: 'Unauthorized',
-    };
+    // Return a Response object directly for unauthorized access
+    return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+      status: 401,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   }
 
   const formData = await req.formData();
@@ -66,7 +70,13 @@ export const PUT = async (req: NextRequest) => {
   const { userId } = auth();
 
   if (!userId) {
-    return new NextResponse('Unauthorized', { status: 401 });
+    // Return a Response object directly for unauthorized access
+    return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+      status: 401,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   }
 
   try {

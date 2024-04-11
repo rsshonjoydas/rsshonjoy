@@ -14,8 +14,10 @@ export function Fox({ currentAnimation, ...props }: any) {
   useEffect(() => {
     Object.values(actions).forEach((action: any) => action.stop());
 
-    if (actions[currentAnimation]) {
-      actions[currentAnimation].play();
+    // Ensure actions[currentAnimation] exists before calling .play() on it
+    const currentAction = actions[currentAnimation];
+    if (currentAction) {
+      currentAction.play();
     }
   }, [actions, currentAnimation]);
 

@@ -19,10 +19,6 @@ export const links = [
     href: '#projects',
   },
   {
-    label: 'Blogs',
-    href: '#blogs',
-  },
-  {
     label: 'Contact',
     href: '#contact',
   },
